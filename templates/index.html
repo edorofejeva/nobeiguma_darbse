@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Hunter</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero-panel">
+        <div>
+          <h1>Number Hunter</h1>
+          <p>Pop the right number balloons, keep your combo, and beat the high score!</p>
+        </div>
+        <button id="start-button" class="primary-button">Start Game</button>
+      </header>
+
+      <section class="stats-panel">
+        <div class="pill">Time: <span id="timer">45</span>s</div>
+        <div class="pill">Score: <span id="score">0</span></div>
+        <div class="pill">Combo: <span id="combo">0</span></div>
+        <div class="pill">Target: <span id="target-number">5</span></div>
+      </section>
+
+      <main class="game-area">
+        <div class="balloon-container" id="balloon-container"></div>
+      </main>
+
+      <section class="results-panel hidden" id="results-panel">
+        <h2>Game Over!</h2>
+        <p>You scored <strong id="final-score">0</strong> points.</p>
+        <p>Your longest combo: <strong id="final-combo">0</strong></p>
+        <label>
+          Enter name:
+          <input type="text" id="player-name" placeholder="Your name" maxlength="20" />
+        </label>
+        <button id="save-score-button" class="primary-button">Save Score</button>
+        <button id="restart-button" class="secondary-button">Play Again</button>
+      </section>
+
+      <section class="highscores-panel">
+        <h2>Top High Scores</h2>
+        <ol id="highscore-list"></ol>
+      </section>
+    </div>
+
+    <script src="/static/js/game.js"></script>
+  </body>
+</html>
